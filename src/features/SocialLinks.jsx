@@ -30,15 +30,13 @@ const SocialLinks = () => {
     },
   ];
   return (
-    <div className="flex space-x-4">
+    <div className="flex space-x-3 pt-8 transform ">
       {socialLinks.map((sl, index) => {
         return (
-          <div key={index}>
-            <a
-              className="text-2xl "
-              href={sl.url}
-              target="_blank"
-              rel="noreferrer">
+          <div
+            key={index}
+            className=" p-2 text-2xl rounded-full bg-slate-100 shadow-lg items-center justify-center hover:translate-y-3 ease-out duration-1000">
+            <a href={sl.url} target="_blank" rel="noreferrer">
               {sl.icon}
             </a>
           </div>

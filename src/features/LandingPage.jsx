@@ -1,30 +1,34 @@
-import { FiDownload } from "react-icons/fi";
 import SocialLinks from "./SocialLinks";
-
+import Button from "./Button";
+import { useNavigate } from "react-router";
 const LandingPage = () => {
+  const nav = useNavigate();
   return (
-    <div className="grid grid-cols-2 pt-2  ">
-      <div className="pl-[5rem] pt-[5rem]">
-        <h1 className="text-4xl font-bold">
-          <span className="text-[#6D99FE]">Hello I'm</span>
-          <span className="text-orange-400"> Manoj</span>
-        </h1>
-        <h2 className="text-2xl font-bold py-3"> Web Developer</h2>
-        <p className="pb-3">
-          A passionate individual focused on developing end-to-end products that
-          create sustainable and scalable social and technical systems for
-          impactful results.
-        </p>
+    <div className="container mx-auto ">
+      <div className="grid grid-cols-2 py-12 ">
+        <div>
+          <h1 className="text-6xl font-bold">
+            <span className="text-[#6D99FE]">Hello I'm</span>
+            <span className="text-orange-400"> Manoj Chand.</span>
+          </h1>
+          <h2 className="text-4xl font-bold py-6"> Web Developer</h2>
+          <p className="pb-6 text-2xl">
+            A passionate individual focused on developing end-to-end products
+            that create sustainable and scalable social and technical systems
+            for impactful results.
+          </p>
+          <div className="flex space-x-5">
+            <Button text="Hire me" />
+            <Button onclick={() => nav("/contact")} text="Let's  Talk" />
+          </div>
+          <SocialLinks />
+        </div>
 
-        <button
-          className="px-3 py-2 border-2 shadow-sm rounded-lg flex justify-between items-baseline
-        gap-2 bg-orange-400 text-white">
-          <FiDownload /> Resume
-        </button>
-      </div>
-
-      <div className="ml-10">
-        <img src="/src/assets/landingimage.gif" alt="" />
+        <img
+          className="w-full cover"
+          src="/src/assets/landingimage.png"
+          alt=""
+        />
       </div>
     </div>
   );
