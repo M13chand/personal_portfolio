@@ -15,8 +15,8 @@ const About = () => {
           a Bachelor's degree in Computer Science and Information Technology.
           Since 2019, I have focused on expanding my skills in front-end
           development with React, backend development with Node.js, Express, and
-          MongoDB, and cybersecurity. I am eager to contribute to the tech
-          industry by delving deeper into these areas.
+          MongoDB. I am eager to contribute to the tech industry by delving
+          deeper into these areas.
         </p>
       </div>
     </div>
