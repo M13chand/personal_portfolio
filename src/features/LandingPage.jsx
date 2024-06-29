@@ -19,7 +19,12 @@ const LandingPage = () => {
           </p>
           <div className="flex space-x-5">
             <Button text="Hire me" />
-            <Button onclick={() => nav("/contact")} text="Let's  Talk" />
+            <Button
+              onclick={() => nav("/contact")}
+              text="Let's  Talk"
+              backgroundColor="#CFFAFE"
+              color="black"
+            />
           </div>
           <SocialLinks />
         </div>
