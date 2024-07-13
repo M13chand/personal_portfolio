@@ -9,7 +9,7 @@ import Portfolio from "./Portfolio";
 const Home = () => {
   useTitle("Home");
   return (
-    <div>
+    <div className="bg-light-green">
       <LandingPage />
       <About />
       <Services />
