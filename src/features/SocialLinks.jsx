@@ -35,7 +35,7 @@ const SocialLinks = () => {
         return (
           <div
             key={index}
-            className=" p-2 text-2xl rounded-full bg-slate-100 shadow-lg items-center justify-center hover:translate-y-3 ease-out duration-1000">
+            className=" p-2 text-2xl rounded-full bg-slate-100 shadow-lg items-center justify-center  lg:hover:translate-y-3 ease-out duration-1000">
             <a href={sl.url} target="_blank" rel="noreferrer">
               {sl.icon}
             </a>
