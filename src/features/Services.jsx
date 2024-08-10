@@ -3,12 +3,12 @@ import useTitle from "../hooks/useTitle";
 const Services = () => {
   useTitle("Services");
   return (
-    <div className="container mx-auto  ">
+    <div id="services" className="container mx-auto  ">
       <h1 className="text-4xl font-bold text-center  ">
         <span className="text-[#9D53C3]">What</span>
         <span className="text-[#CB9BBA]"> I Do?</span>
       </h1>
-      <div className="grid grid-cols-2 gap-10 py-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-12">
         <div className="flex">
           <div className=" h-[125px] w-[200px] bg-purple-100 rounded-lg ">
             <img

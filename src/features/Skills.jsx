@@ -78,7 +78,7 @@ const Skills = () => {
   ];
 
   return (
-    <div className="container mx-auto">
+    <div id="skills" className="container mx-auto">
       <h1 className="text-4xl font-bold text-center text-orange-500">
         Skills and Tools
       </h1>
