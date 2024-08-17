@@ -1,19 +1,19 @@
 import { FaGithub } from "react-icons/fa";
 import Button from "./Button";
 
-const Portfolio = ({ singleProject }) => {
+const Portfolio = () => {
   return (
-    <div id="portfolio" className="container mx-auto px-4">
-      <h1 className="text-center text-4xl font-bold text-orange-600 mb-10">
+    <div id="portfolio" className="container mx-auto ">
+      <h1 className="text-center text-4xl font-bold text-orange-600 mb-12">
         Portfolio
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {projects.map((project, i) => (
           <div
             key={i}
-            className="w-full max-w-md md:max-w-sm lg:max-w-xs mx-auto bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+            className="w-full max-w-md md:max-w-sm lg:max-w-xs mx-auto bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gray-100">
             <img
-              className="w-full h-64 object-cover"
+              className="w-full h-64 object-cover lg:h-48" // Adjust the height for larger screens
               src={project.image}
               alt={project.name}
             />
@@ -22,14 +22,14 @@ const Portfolio = ({ singleProject }) => {
                 {project.name}
               </h2>
               <p className="text-gray-600 mt-2">{project.description}</p>
-              <div className="mt-4 flex justify-center">
+              <div className="mt-4">
                 <Button
                   text="Code"
                   icon={<FaGithub className="inline mr-2" />}
-                  backgroundColor="orange"
-                  color="white"
-                  hover="bg-orange-700"
-                  onclick={() => window.open(project.github, "_blank")}
+                  backgroundColor="bg-orange-400"
+                  color="text-white"
+                  hover="bg-orange-500"
+                  onClick={() => window.open(project.github, "_blank")}
                 />
               </div>
             </div>

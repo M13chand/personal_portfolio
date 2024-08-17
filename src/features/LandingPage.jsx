@@ -1,3 +1,4 @@
+import React from "react";
 import SocialLinks from "./SocialLinks";
 import Button from "./Button";
 
@@ -17,18 +18,27 @@ const LandingPage = () => {
             for impactful results.
           </p>
           <div className="flex space-x-5">
-            <Button
-              text="Hire me"
-              backgroundColor="bg-orange-400"
-              color="text-white"
-              hover="bg-orange-500"
-            />
-            <Button
-              text="Let's Talk"
-              backgroundColor="bg-cyan-200"
-              color="text-black"
-              hover="bg-cyan-300"
-            />
+            {/* Download CV */}
+            <a
+              href="/path/to/your/resume.pdf" // Replace with the correct path
+              download="Manoj_Chand_Resume.pdf">
+              <Button
+                text="Hire me"
+                backgroundColor="bg-orange-400"
+                color="text-white"
+                hover="bg-orange-500"
+              />
+            </a>
+
+            {/* Navigate to contact page */}
+            <a href="/contact">
+              <Button
+                text="Let's Talk"
+                backgroundColor="bg-cyan-200"
+                color="text-black"
+                hover="bg-cyan-300"
+              />
+            </a>
           </div>
           <SocialLinks />
         </div>
@@ -37,7 +47,7 @@ const LandingPage = () => {
           <img
             className="w-full cover"
             src="/src/assets/landingimage.png"
-            alt=""
+            alt="Landing Image"
           />
         </div>
       </div>

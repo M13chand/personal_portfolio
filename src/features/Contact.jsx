@@ -50,7 +50,9 @@ const Contact = () => {
 
   return (
     <div id="contact" className="container mx-auto">
-      <h1 className="text-4xl font-bold text-center text-blue-500">Contact</h1>
+      <h1 className="text-4xl font-bold text-center text-blue-500 pt-12">
+        Contact
+      </h1>
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="py-12 px-4">
           <h1 className="text-2xl font-bold">Get In Touch</h1>
