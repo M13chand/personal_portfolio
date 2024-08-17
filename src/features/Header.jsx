@@ -1,63 +1,189 @@
-import React from "react";
-import SocialLinks from "./SocialLinks";
-import Button from "./Button";
-import { Link } from "react-scroll"; // Assuming you're using react-scroll
+import { useState } from "react";
+import { Link } from "react-scroll";
 
-const LandingPage = () => {
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div className="container mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 py-12">
-        <div>
-          <h1 className="text-4xl font-bold lg:text-8xl">
-            <span className="text-[#6D99FE]">Hello, I'm </span>
-            <span className="text-orange-400">Manoj Chand.</span>
-          </h1>
-          <h2 className="text-3xl font-bold py-6 lg:text-6xl">Web Developer</h2>
-          <p className="pb-6 text-xl md:text-2xl">
-            A passionate individual focused on developing end-to-end products
-            that create sustainable and scalable social and technical systems
-            for impactful results.
-          </p>
-          <div className="flex space-x-5">
-            {/* Download CV */}
-            <a
-              href="/path/to/your/resume.pdf" // Replace with the correct path
-              download="Manoj_Chand_Resume.pdf">
-              <Button
-                text="Hire me"
-                backgroundColor="bg-orange-400"
-                color="text-white"
-                hover="bg-orange-500"
-              />
-            </a>
+    <header className="py-3 shadow-md flex items-center justify-between bg-white sticky top-0 z-50">
+      <img className="w-12 h-12 ml-4" src="/src/assets/logo.png" alt="logo" />
 
-            {/* Scroll to contact section */}
-            <Link
-              to="contact" // The ID of the contact section
-              smooth={true}
-              duration={500}
-              className="cursor-pointer">
-              <Button
-                text="Let's Talk"
-                backgroundColor="bg-cyan-200"
-                color="text-black"
-                hover="bg-cyan-300"
-              />
-            </Link>
-          </div>
-          <SocialLinks />
-        </div>
+      {/* Hamburger menu button visible only on small screens */}
+      <button
+        onClick={toggleMenu}
+        className="text-2xl focus:outline-none mr-3 sm:hidden">
+        {isOpen ? (
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        ) : (
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        )}
+      </button>
 
-        <div className="sm:pt-12">
-          <img
-            className="w-full cover"
-            src="/src/assets/landingimage.png"
-            alt="Landing Image"
-          />
-        </div>
-      </div>
-    </div>
+      {/* Navigation links visible on larger screens, hidden on small screens */}
+      <nav className="hidden sm:flex space-x-5 pr-4">
+        <Link
+          to="home"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="cursor-pointer hover:text-orange-500 transition-colors duration-300">
+          Home
+        </Link>
+        <Link
+          to="about"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="cursor-pointer hover:text-orange-500 transition-colors duration-300">
+          About
+        </Link>
+        <Link
+          to="services"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="cursor-pointer hover:text-orange-500 transition-colors duration-300">
+          Services
+        </Link>
+        <Link
+          to="skills"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="cursor-pointer hover:text-orange-500 transition-colors duration-300">
+          Skills
+        </Link>
+        <Link
+          to="portfolio"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="cursor-pointer hover:text-orange-500 transition-colors duration-300">
+          Portfolio
+        </Link>
+        <Link
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="cursor-pointer hover:text-orange-500 transition-colors duration-300">
+          Contact
+        </Link>
+      </nav>
+
+      {/* Mobile menu visible only when toggled open */}
+      {isOpen && (
+        <nav className="absolute top-16 left-0 w-screen bg-white shadow-md lg:hidden z-50">
+          <ul className="p-4 space-y-4 bg-gray-800 text-white">
+            <li>
+              <Link
+                to="home"
+                onClick={toggleMenu}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="cursor-pointer hover:text-orange-500 transition-colors duration-300">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="about"
+                onClick={toggleMenu}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="cursor-pointer hover:text-orange-500 transition-colors duration-300">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="services"
+                onClick={toggleMenu}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="cursor-pointer hover:text-orange-500 transition-colors duration-300">
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="skills"
+                onClick={toggleMenu}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="cursor-pointer hover:text-orange-500 transition-colors duration-300">
+                Skills
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="portfolio"
+                onClick={toggleMenu}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="cursor-pointer hover:text-orange-500 transition-colors duration-300">
+                Portfolio
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="contact"
+                onClick={toggleMenu}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="cursor-pointer hover:text-orange-500 transition-colors duration-300">
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      )}
+    </header>
   );
 };
 
-export default LandingPage;
+export default Header;
