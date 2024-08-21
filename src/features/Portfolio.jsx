@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const Portfolio = () => {
   return (
-    <div id="portfolio" className="container mx-auto ">
+    <div id="portfolio" className="container mx-auto  pb-12">
       <h1 className="text-center text-4xl font-bold text-orange-600 mb-12">
         Portfolio
       </h1>
@@ -13,7 +13,7 @@ const Portfolio = () => {
             key={i}
             className="w-full max-w-md md:max-w-sm lg:max-w-xs mx-auto bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gray-100">
             <img
-              className="w-full h-64 object-cover lg:h-48" // Adjust the height for larger screens
+              className="w-full h-64 object-fit lg:h-48" // Adjust the height for larger screens
               src={project.image}
               alt={project.name}
             />
@@ -45,14 +45,14 @@ const projects = [
     name: "Project 1",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsa",
-    image: "/src/assets/contact.gif",
+    image: "/src/assets/Project1-myPortfolio.PNG",
     github: "https://github.com/",
   },
   {
     name: "Project 2",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsa",
-    image: "/src/assets/contact.gif",
+    image: "/src/assets/project2-codepenclone.PNG",
     github: "https://github.com/",
   },
   {

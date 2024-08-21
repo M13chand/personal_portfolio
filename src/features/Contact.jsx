@@ -49,11 +49,9 @@ const Contact = () => {
   });
 
   return (
-    <div id="contact" className="container mx-auto">
-      <h1 className="text-4xl font-bold text-center text-blue-500 pt-12">
-        Contact
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2">
+    <div id="contact" className="container mx-auto px-4">
+      <h1 className="text-4xl font-bold text-center text-blue-500 ">Contact</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div className="py-12 px-4">
           <h1 className="text-2xl font-bold">Get In Touch</h1>
           <p className="py-3 text-xl">
@@ -92,7 +90,11 @@ const Contact = () => {
               type="text"
               name="user_name"
               placeholder="Your Name"
-              className="border-2 border-gray-400 p-2 w-full rounded-lg"
+              className={`border-2 p-2 w-full rounded-lg ${
+                formik.touched.user_name && formik.errors.user_name
+                  ? "border-red-500"
+                  : "border-gray-400"
+              }`}
               value={formik.values.user_name}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -105,7 +107,11 @@ const Contact = () => {
               type="email"
               name="user_email"
               placeholder="Your Email"
-              className="border-2 border-gray-400 p-2 w-full rounded-lg"
+              className={`border-2 p-2 w-full rounded-lg ${
+                formik.touched.user_email && formik.errors.user_email
+                  ? "border-red-500"
+                  : "border-gray-400"
+              }`}
               value={formik.values.user_email}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -126,7 +132,11 @@ const Contact = () => {
             <textarea
               name="message"
               placeholder="Your Message"
-              className="border-2 border-gray-400 p-2 w-full h-40 rounded-lg"
+              className={`border-2 p-2 w-full h-40 rounded-lg ${
+                formik.touched.message && formik.errors.message
+                  ? "border-red-500"
+                  : "border-gray-400"
+              }`}
               value={formik.values.message}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -135,11 +145,21 @@ const Contact = () => {
               <div className="text-red-500">{formik.errors.message}</div>
             ) : null}
 
+            {/* Helper message to inform user why button is disabled */}
+            {!formik.isValid && formik.dirty && (
+              <div className="text-red-500 mb-2">
+                Please fill out all required fields to enable the "Send" button.
+              </div>
+            )}
+
             <button
               type="submit"
-              className="w-full bg-orange-500 text-white p-2 rounded-lg"
-              disabled={!formik.isValid || !formik.dirty} // Disable if form is not valid or untouched
-            >
+              className={`w-full p-2 rounded-lg ${
+                !formik.isValid || !formik.dirty
+                  ? "bg-gray-400 text-white cursor-not-allowed"
+                  : "bg-orange-500 text-white"
+              }`}
+              disabled={!formik.isValid || !formik.dirty}>
               Send
             </button>
             <ToastContainer />
