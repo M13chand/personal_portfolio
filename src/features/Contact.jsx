@@ -50,7 +50,9 @@ const Contact = () => {
 
   return (
     <div id="contact" className="container mx-auto px-4">
-      <h1 className="text-4xl font-bold text-center text-blue-500 ">Contact</h1>
+      <h1 className="text-2xl md:text-4xl font-bold text-center text-blue-500">
+        Contact
+      </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div className="py-12 px-4">
           <h1 className="text-2xl font-bold">Get In Touch</h1>
@@ -145,19 +147,10 @@ const Contact = () => {
               <div className="text-red-500">{formik.errors.message}</div>
             ) : null}
 
-            {/* Helper message to inform user why button is disabled */}
-            {!formik.isValid && formik.dirty && (
-              <div className="text-red-500 mb-2">
-                Please fill out all required fields to enable the "Send" button.
-              </div>
-            )}
-
             <button
               type="submit"
-              className={`w-full p-2 rounded-lg ${
-                !formik.isValid || !formik.dirty
-                  ? "bg-gray-400 text-white cursor-not-allowed"
-                  : "bg-orange-500 text-white"
+              className={`w-full p-2 rounded-lg text-white bg-orange-500 ${
+                !formik.isValid || !formik.dirty ? "cursor-not-allowed" : ""
               }`}
               disabled={!formik.isValid || !formik.dirty}>
               Send

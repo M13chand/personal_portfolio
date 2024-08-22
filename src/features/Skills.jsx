@@ -79,7 +79,7 @@ const Skills = () => {
 
   return (
     <div id="skills" className="container mx-auto">
-      <h1 className="text-4xl font-bold text-center text-orange-500">
+      <h1 className=" text-2xl md:text-4xl  font-bold text-center text-orange-500">
         Skills and Tools
       </h1>
       <div className="grid grid-cols-2 gap-5 py-12 place-items-center md:grid-cols-3 lg:grid-cols-5">

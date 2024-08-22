@@ -11,9 +11,7 @@ const Header = () => {
 
   // Handle window resize
   const handleResize = () => {
-    // Check if the window width is above or below the breakpoint for small screens (e.g., 640px)
     if (window.innerWidth >= 640) {
-      // Close the menu when on larger screens
       setIsOpen(false);
     }
   };
@@ -21,7 +19,7 @@ const Header = () => {
   // Add and clean up resize event listener
   useEffect(() => {
     window.addEventListener("resize", handleResize);
-    // Clean up the event listener on component unmount
+
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -79,7 +77,7 @@ const Header = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              activeClass="text-orange-500" // Add active class for active link
+              activeClass="text-orange-500"
               className="cursor-pointer hover:text-orange-500 transition-colors duration-300">
               {section.charAt(0).toUpperCase() + section.slice(1)}
             </Link>

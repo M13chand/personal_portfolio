@@ -8,7 +8,7 @@ const Services = () => {
     <div
       id="services"
       className="container mx-auto px-4 py-8 md:py-12 bg-[#f8f9fa]">
-      <h1 className="text-3xl md:text-4xl font-bold text-center mb-6 md:mb-10">
+      <h1 className="text-2xl md:text-4xl font-bold text-center mb-6 md:mb-10">
         <span className="text-[#9D53C3]">What</span>
         <span className="text-[#CB9BBA]"> I Do?</span>
       </h1>
@@ -23,7 +23,7 @@ const Services = () => {
             <h2 className="text-xl md:text-2xl font-bold pb-1 md:pb-2 text-[#9D53C3]">
               Frontend Development
             </h2>
-            <p className="text-gray-700 text-sm md:text-base">
+            <p className="text-gray-700 text-base md:text-lg lg:text-xl xl:text-2xl pb-6">
               I design intuitive and responsive user interfaces using HTML, CSS,
               JavaScript, and React.
             </p>
@@ -39,7 +39,7 @@ const Services = () => {
             <h2 className="text-xl md:text-2xl font-bold pb-1 md:pb-2 text-[#CB9BBA]">
               Backend Development
             </h2>
-            <p className="text-gray-700 text-sm md:text-base">
+            <p className="text-gray-700 text-base md:text-lg lg:text-xl xl:text-2xl pb-6">
               I build secure and efficient server-side applications using
               Node.js, Express, and MongoDB.
             </p>

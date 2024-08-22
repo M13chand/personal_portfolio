@@ -1,6 +1,7 @@
-import React from "react";
 import SocialLinks from "./SocialLinks";
 import Button from "./Button";
+import { Link } from "react-scroll";
+import Contact from "./Contact";
 
 const LandingPage = () => {
   return (
@@ -30,18 +31,24 @@ const LandingPage = () => {
                 backgroundColor="bg-orange-400"
                 color="text-white"
                 hover="bg-orange-500"
+                className="focus:outline-none"
               />
             </a>
 
             {/* Navigate to contact page */}
-            <a href="/contact" className="block">
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}>
               <Button
                 text="Let's Talk"
                 backgroundColor="bg-cyan-200"
                 color="text-black"
                 hover="bg-cyan-300"
               />
-            </a>
+            </Link>
           </div>
           <SocialLinks />
         </div>
