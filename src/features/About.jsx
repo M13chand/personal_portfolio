@@ -12,7 +12,7 @@ const About = () => {
         <div className="flex justify-center items-center">
           <img
             className="w-full h-auto max-w-md md:max-w-lg lg:max-w-xl xl:max-w-3xl rounded-lg"
-            src="/src/assets/Version control-bro.png"
+            src="/assets/Version control-bro.png"
             alt="About"
           />
         </div>

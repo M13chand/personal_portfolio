@@ -56,7 +56,7 @@ const LandingPage = () => {
         <div className="flex justify-center items-center">
           <img
             className="w-full h-auto max-w-md md:max-w-lg lg:max-w-xl xl:max-w-3xl"
-            src="/src/assets/Programming-bro.png"
+            src="/assets/Programming-bro.png"
             alt="Landing Image"
           />
         </div>

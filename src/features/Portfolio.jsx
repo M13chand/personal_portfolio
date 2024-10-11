@@ -45,28 +45,28 @@ const projects = [
     name: "Project 1",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsa",
-    image: "/src/assets/Project1-myPortfolio.PNG",
+    image: "assets/Project1-myPortfolio.PNG",
     github: "https://github.com/",
   },
   {
     name: "Project 2",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsa",
-    image: "/src/assets/project2-codepenclone.PNG",
+    image: "assets/project2-codepenclone.PNG",
     github: "https://github.com/",
   },
   {
     name: "Project 3",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsa",
-    image: "/src/assets/contact.gif",
+    image: "assets/contact.gif",
     github: "https://github.com/",
   },
   {
     name: "Project 4",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsa",
-    image: "/src/assets/contact.gif",
+    image: "assets/contact.gif",
     github: "https://github.com/",
   },
 ];
